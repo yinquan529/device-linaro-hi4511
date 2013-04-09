@@ -1,0 +1,44 @@
+# config.mk
+# 
+# Product-specific compile-time definitions.
+#
+
+TARGET_BOARD_PLATFORM := hi4511
+TARGET_NO_BOOTLOADER := true # We use our own methods for building bootloaders
+TARGET_NO_KERNEL := false
+
+TARGET_USE_XLOADER := false
+TARGET_USE_UBOOT := false
+TARGET_NO_RECOVERY := true
+TARGET_NO_RADIOIMAGE := true
+BOARD_USES_GENERIC_AUDIO := false
+BOARD_USES_ALSA_AUDIO := false
+HARDWARE_OMX := false
+USE_CAMERA_STUB := false
+
+BOARD_HAVE_BLUETOOTH := false
+
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+
+TARGET_ARCH := arm
+# Enable NEON feature
+TARGET_ARCH_VARIANT := armv7-a-neon
+ARCH_ARM_HAVE_TLS_REGISTER := true
+
+EXTRA_PACKAGE_MANAGEMENT := false
+
+TARGET_CPU_SMP := true
+
+KERNEL_CONFIG := hs_defconfig
+TARGET_KERNEL_SOURCE := kernel/linaro/hisilicon/
+BUILD_KERNEL_MODULES := false
+DEVICE_TREES := hi4511:board.dtb
+INSTALLED_KERNEL_TARGET_NAME := kernel
+INSTALLED_RAMDISK_TARGET_NAME := ramdisk.img
+INCLUDE_PERF := 0
+
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 432013312
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 134217728 
+BOARD_FLASH_BLOCK_SIZE := 4096
