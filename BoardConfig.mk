@@ -13,8 +13,13 @@ TARGET_NO_RECOVERY := true
 TARGET_NO_RADIOIMAGE := true
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := false
+PREBUILT_MKBOOTIMG := vendor/hisilicon/mkbootimg_hisilicon
 HARDWARE_OMX := false
 USE_CAMERA_STUB := false
+BOARD_KERNEL_BASE := 0x00000000
+TARGET_HAS_DEVICETREE := true
+TARGET_TAG_ADDRESS := 0x01100000
+BOARD_KERNEL_CMDLINE := mem=1024M console=ttyAMA0,115200 vmalloc=128M k3v2_pmem=0 mmcparts=mmcblk0:p1(xloader),p3(nvme),p4(misc),p5(splash),p6(oeminfo),p7(reserved1),p8(reserved2),p9(recovery2),p10(recovery),p11(boot),p12(modemimage),p13(modemnvm1),p14(modemnvm2),p15(system),p16(cache),p17(cust),p18(userdata);mmcblk1:p1(ext_sdcard) androidboot.hardware=hisiliconhi4511
 
 BOARD_HAVE_BLUETOOTH := false
 
@@ -30,11 +35,12 @@ EXTRA_PACKAGE_MANAGEMENT := false
 
 TARGET_CPU_SMP := true
 
-KERNEL_CONFIG := hs_defconfig
+KERNEL_CONFIG := hs_android_defconfig
 TARGET_KERNEL_SOURCE := kernel/linaro/hisilicon/
 BUILD_KERNEL_MODULES := false
-DEVICE_TREES := hi4511:board.dtb
+DEVICE_TREES := hi4511:hi4511.dtb
 INSTALLED_KERNEL_TARGET_NAME := kernel
+INSTALLED_DTB_TARGET_NAME := hi4511.dtb
 INSTALLED_RAMDISK_TARGET_NAME := ramdisk.img
 INCLUDE_PERF := 0
 
