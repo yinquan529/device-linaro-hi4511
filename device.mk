@@ -18,6 +18,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
         ro.nohardwaregfx = true \
         debug.sf.no_hw_vsync = 1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.sf.lcd_density=320
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
         ro.hardware = hisiliconhi4511
 
