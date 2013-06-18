@@ -35,7 +35,8 @@ EXTRA_PACKAGE_MANAGEMENT := false
 
 TARGET_CPU_SMP := true
 
-KERNEL_CONFIG := hs_android_defconfig
+KERNEL_CONFIG := arch/arm/configs/vexpress.conf \
+                 linaro/configs/android.conf
 TARGET_KERNEL_SOURCE := kernel/linaro/hisilicon/
 BUILD_KERNEL_MODULES := false
 DEVICE_TREES := hi4511:hi4511.dtb
