@@ -35,7 +35,7 @@ EXTRA_PACKAGE_MANAGEMENT := false
 
 TARGET_CPU_SMP := true
 
-KERNEL_CONFIG := arch/arm/configs/vexpress.conf \
+KERNEL_CONFIG := arch/arm/configs/hs_defconfig \
                  linaro/configs/android.conf
 TARGET_KERNEL_SOURCE := kernel/linaro/hisilicon/
 BUILD_KERNEL_MODULES := false
