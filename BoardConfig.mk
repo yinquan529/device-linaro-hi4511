@@ -19,7 +19,7 @@ USE_CAMERA_STUB := false
 BOARD_KERNEL_BASE := 0x00000000
 TARGET_HAS_DEVICETREE := true
 TARGET_TAG_ADDRESS := 0x01100000
-BOARD_KERNEL_CMDLINE := mem=1024M console=ttyAMA0,115200 vmalloc=128M k3v2_pmem=0 mmcparts=mmcblk0:p1(xloader),p3(nvme),p4(misc),p5(splash),p6(oeminfo),p7(reserved1),p8(reserved2),p9(recovery2),p10(recovery),p11(boot),p12(modemimage),p13(modemnvm1),p14(modemnvm2),p15(system),p16(cache),p17(cust),p18(userdata);mmcblk1:p1(ext_sdcard) androidboot.hardware=hisiliconhi4511
+BOARD_KERNEL_CMDLINE := mem=1024M console=ttyAMA0,115200 vmalloc=128M k3v2_pmem=0 mmcparts=mmcblk0:p1(xloader),p3(nvme),p4(misc),p5(splash),p6(oeminfo),p7(reserved1),p8(reserved2),p9(recovery2),p10(recovery),p11(boot),p12(modemimage),p13(modemnvm1),p14(modemnvm2),p15(system),p16(cache),p17(cust),p18(userdata);mmcblk1:p1(ext_sdcard) androidboot.hardware=hisiliconhi4511 androidboot.serialno=0123456789ABCDEF
 
 BOARD_HAVE_BLUETOOTH := false
 
