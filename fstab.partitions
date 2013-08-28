@@ -5,5 +5,5 @@
 
 
 /dev/block/mmcblk0p15    /system             ext4      ro                                                    wait
-/dev/block/mmcblk0p16   /cache              ext4      noatime,nosuid,nodev,nomblk_io_submit,errors=panic    wait
-/dev/block/mmcblk0p18    /data               ext4      noatime,nosuid,nodev,nomblk_io_submit,errors=panic    wait
+/dev/block/mmcblk0p16   /cache              ext4      discard,noauto_da_alloc,mblk_io_submit,data=writeback,commit=20,barrier=0    wait
+/dev/block/mmcblk0p18    /data               ext4     discard,noauto_da_alloc,mblk_io_submit,data=writeback,commit=20,barrier=0    wait
