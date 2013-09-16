@@ -38,7 +38,11 @@ TARGET_CPU_SMP := true
 
 KERNEL_CONFIG := arch/arm/configs/hs_defconfig \
                  linaro/configs/android.conf
-TARGET_KERNEL_SOURCE := kernel/linaro/hisilicon/
+ifneq ($(wildcard ../../../kernel/linaro/hisilicon/),)
+TARGET_KERNEL_SOURCE = kernel/linaro/hisilicon/ 
+else
+TARGET_KERNEL_SOURCE = kernel/linaro/hisilicon-open
+endif
 BUILD_KERNEL_MODULES := false
 DEVICE_TREES := hi4511:hi4511.dtb
 INSTALLED_KERNEL_TARGET_NAME := kernel
