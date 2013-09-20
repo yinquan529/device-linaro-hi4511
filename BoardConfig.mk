@@ -38,7 +38,7 @@ TARGET_CPU_SMP := true
 
 KERNEL_CONFIG := arch/arm/configs/hs_defconfig \
                  linaro/configs/android.conf
-ifneq ($(wildcard ../../../kernel/linaro/hisilicon/),)
+ifneq ($(wildcard $(TOPDIR)kernel/linaro/hisilicon/),)
 TARGET_KERNEL_SOURCE = kernel/linaro/hisilicon/ 
 else
 TARGET_KERNEL_SOURCE = kernel/linaro/hisilicon-open
