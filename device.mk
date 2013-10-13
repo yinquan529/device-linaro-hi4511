@@ -20,6 +20,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.sf.lcd_density=320
+        ro.disablesuspend=true
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
         ro.hardware = hisiliconhi4511
