@@ -36,12 +36,14 @@ EXTRA_PACKAGE_MANAGEMENT := false
 
 TARGET_CPU_SMP := true
 
-KERNEL_CONFIG := arch/arm/configs/hs_defconfig \
-                 linaro/configs/android.conf
 ifneq ($(wildcard $(TOPDIR)kernel/linaro/hisilicon/),)
 TARGET_KERNEL_SOURCE = kernel/linaro/hisilicon/ 
+KERNEL_CONFIG := arch/arm/configs/hs_defconfig \
+                 linaro/configs/android.conf
 else
 TARGET_KERNEL_SOURCE = kernel/linaro/hisilicon-open
+KERNEL_CONFIG := arch/arm/configs/multi_v7_defconfig  linaro/configs/hi3xxx.conf \
+                 linaro/configs/android.conf
 endif
 BUILD_KERNEL_MODULES := false
 DEVICE_TREES := hi4511:hi4511.dtb
